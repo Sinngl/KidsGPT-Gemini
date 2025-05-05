@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}KidsGPT – Meraklı Zihinler İçin{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='css/styles.css') }}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <header>
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+      <div class="logo" style="display: flex; align-items: center;">
+        <img
+          src="{{ url_for('static', path='images/logo.png') }}"
+          alt="KidsGPT Logo"
+          style="height: 70px; width: auto;"
+        />
+        <h1>KidsGPT</h1>
+      </div>
+
+      <p class="tagline" style="font-size: 1rem; color: white; margin: 0;">
+        Meraklı zihinler için arkadaş canlısı yapay zeka yardımcınız.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>KidsGPT – 8–13 yaş arası çocuklar için güvenli ve eğlenceli yapay zeka asistanınız</p>
+      <p class="small">Yapay Zeka Dil Modeli: Gemini AI</p>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', path='js/script.js') }}"></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

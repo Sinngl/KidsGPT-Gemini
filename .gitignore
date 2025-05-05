@@ -1,0 +1,17 @@
+# Ortam değişkenleri dosyası
+.env
+
+# Sanal ortam klasörü
+venv/
+.venv/
+
+# Derlenmiş Python dosyaları
+__pycache__/
+*.pyc
+
+# IDE ayar dosyaları
+.vscode/
+.idea/
+
+# Diğer örnekler
+.DS_Store

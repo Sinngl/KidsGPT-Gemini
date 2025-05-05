@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <h2>Merhaba! Bana her şeyi sorabilirsin.</h2>
+    <p>Dünyayı eğlenceli ve güvenli bir şekilde öğrenmene yardımcı olmak için buradayım.</p>
+  </div>
+</section>
+
+<section class="chat-container">
+  <form action="/ask" method="POST" class="question-form">
+    <div class="form-group">
+      <label for="age">Kaç yaşındasın?</label>
+      <select name="age" id="age" required>
+        <option value="">Yaşını seç</option>
+        {% for i in range(8, 14) %}
+          <option value="{{ i }}" {% if age == i %}selected{% endif %}>{{ i }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <input type="hidden" id="language-input" value="tr">
+
+    <div class="form-group">
+      <label for="question">Ne öğrenmek istersin?</label>
+      <textarea
+        name="question"
+        id="question"
+        rows="3"
+        placeholder="Sorunu yaz..."
+        required
+      >{{ question or '' }}</textarea>
+    </div>
+
+    <div class="form-group ask-group">
+      <button type="submit" class="ask-button">KidsGPT’ye Sor</button>
+    </div>
+
+    <div class="form-group voice-controls">
+      <button type="button" id="mic-button">🎤 Sesle Yaz</button>
+      <button type="button" id="play-response">🔊 Oku</button>
+    </div>
+
+
+
+    {% if error %}
+      <div class="error-message">
+        <p>{{ error }}</p>
+      </div>
+    {% endif %}
+  </form>
+
+  {% if response %}
+    <div class="response-container">
+      <div class="question-bubble">
+        <p><strong>Senin sorun:</strong> {{ question }}</p>
+      </div>
+      <div class="response-bubble">
+        <p><strong>KidsGPT diyor ki:</strong></p>
+        <div class="response-content">
+          {{ response|safe }}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+<section class="features">
+  <h2>Neler sorabilirsin?</h2>
+  <div class="feature-cards">
+    <div class="card">
+      <div class="card-icon">🔭</div>
+      <h3>Bilim</h3>
+      <p>Gezegenler, hayvanlar, icatlar ve işlerin nasıl çalıştığı hakkında bilgi edin!</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📚</div>
+      <h3>Okul Yardımı</h3>
+      <p>Ödevlerinle ilgili yardım al ve farklı konular hakkında bilgi edin.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌍</div>
+      <h3>Dünya</h3>
+      <p>Ülkeler, kültürler, tarih ve şaşırtıcı gerçekler hakkında bilgi öğren!</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">💡</div>
+      <h3>İlginç Bilgiler</h3>
+      <p>Sevdiğin konular hakkında ilginç bilgiler öğren.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,262 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #10b981;
+    --accent-color: #f59e0b;
+    --light-color: #f8f9fa;
+    --dark-color: #1f2937;
+    --danger-color: #ef4444;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --font-main: 'Nunito', 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+    --font-body: 'Quicksand', 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f0fd 100%);
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 1.2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 15px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.logo h1 {
+    font-family: var(--font-main);
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(to right, #ffffff, #e0e7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    font-style: italic;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 0;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #fbbf24 100%);
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.hero .hero-content {
+    padding: 3rem 2rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.125rem;
+    color: #f9fafb;
+}
+
+/* Chat Container */
+.chat-container {
+    margin-bottom: 2rem;
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Labels & Inputs */
+.chat-container .form-group {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.chat-container .form-group label {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.chat-container .form-group select,
+.chat-container .form-group textarea {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    outline: none;
+}
+
+.chat-container .form-group select:focus,
+.chat-container .form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chat-container .form-group textarea::placeholder {
+    color: #888;
+}
+
+/* Ask Button */
+.ask-group {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.ask-button {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.ask-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.ask-button:active {
+    transform: translateY(0);
+}
+
+/* Voice Controls */
+.voice-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#mic-button,
+#play-response {
+    color: white;
+    background: var(--primary-color);
+    transition: background 0.2s ease, transform 0.1s ease;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#mic-button:hover,
+#play-response:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+#mic-button:active,
+#play-response:active {
+  transform: translateY(0);
+}
+
+/* Feature Cards */
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.feature-cards .card {
+    flex: 1 1 calc(50% - 1rem);
+    box-sizing: border-box;
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+    .feature-cards .card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Footer Spacing */
+footer {
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+}
+
+footer .container p {
+    text-align: center;
+    margin: 0.25rem 0;
+}
+
+
+
