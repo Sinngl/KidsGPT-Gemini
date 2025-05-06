@@ -14,10 +14,10 @@
 
 ## Ürün İsmi
 
---KidGPT--
+--KidsGPT--
 
 ## Ürün Açıklaması
-- KidGPT, çocuklara yaşlarına uygun, güvenli ve eğitici içerik sunan bir yapay zeka sohbet asistanıdır. Çocuklar, uygulamayı kullanmaya başlamadan önce yaşlarını seçer ve merak ettikleri konularda sorular sorarlar. Yapay zeka, çocuğun yaş seviyesini dikkate alarak sade, anlaşılır ve pedagojik açıdan uygun yanıtlar üretir. KidGPT'nin amacı, çocukların meraklarını desteklemek, öğrenme isteğini artırmak ve güvenli dijital öğrenme deneyimleri sunmaktır.
+- KidsGPT, çocuklara yaşlarına uygun, güvenli ve eğitici içerik sunan bir yapay zeka sohbet asistanıdır. Çocuklar, uygulamayı kullanmaya başlamadan önce yaşlarını seçer ve merak ettikleri konularda sorular sorarlar. Yapay zeka, çocuğun yaş seviyesini dikkate alarak sade, anlaşılır ve pedagojik açıdan uygun yanıtlar üretir. KidsGPT'nin amacı, çocukların meraklarını desteklemek, öğrenme isteğini artırmak ve güvenli dijital öğrenme deneyimleri sunmaktır.
 
 ## Ürün Özellikleri
 - Yaş Grubu Seçimi: Kullanıcılar (çocuklar) sohbet öncesinde yaşlarını seçer. Bu sayede sistem, yaşa uygun içerik sunar.
